@@ -1,8 +1,0 @@
-README.md
-setup.py
-eduplatform.egg-info/PKG-INFO
-eduplatform.egg-info/SOURCES.txt
-eduplatform.egg-info/dependency_links.txt
-eduplatform.egg-info/entry_points.txt
-eduplatform.egg-info/requires.txt
-eduplatform.egg-info/top_level.txt

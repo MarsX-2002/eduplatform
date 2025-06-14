@@ -1,2 +1,0 @@
-[console_scripts]
-eduplatform = eduplatform.cli.main:main
