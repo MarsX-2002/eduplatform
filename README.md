@@ -351,46 +351,27 @@ export_school format=sqlite
 ## Project Structure
 
 ```
-eduplatform/
-├── cli/                      # Command-line interface
-│   ├── __init__.py
-│   ├── main.py               # Main CLI application
-│   └── export_commands.py    # Export-related commands
-├── models/                   # Data models
-│   ├── __init__.py
-│   ├── user.py               # User base class and roles
-│   ├── assignment.py         # Assignment model
-│   ├── grade.py              # Grade model
-│   ├── notification.py       # Notification model
-│   └── schedule.py           # Schedule model
-├── repositories/             # Data access layer
-│   ├── __init__.py
-│   ├── base.py               # Base repository
-│   ├── user_repository.py    # User repository
-│   ├── assignment_repository.py
-│   ├── grade_repository.py
-│   ├── notification_repository.py
-│   └── schedule_repository.py
-├── services/                 # Business logic
-│   ├── __init__.py
-│   ├── auth_service.py       # Authentication service
-│   ├── assignment_service.py # Assignment management
-│   ├── grade_service.py      # Grade management
-│   ├── notification_service.py # Notification handling
-│   └── export_service.py     # Data export functionality
-├── utils/                    # Utility functions
-│   ├── __init__.py
-│   └── export_utils.py       # Export utilities
-├── tests/                    # Test files
-│   ├── unit/
-│   └── integration/
-├── run.py                    # Application entry point
-└── README.md                 # This file
+.
+├── eduplatform/           # Main package directory
+│   ├── __init__.py       # Package initialization
+│   ├── models/           # Data models (User, Assignment, etc.)
+│   ├── repositories/     # Data access layer
+│   ├── services/         # Business logic
+│   │   ├── auth_service.py
+│   │   ├── assignment_service.py
+│   │   ├── grade_service.py
+│   │   └── export_service.py
+│   ├── cli/              # Command-line interface
+│   │   └── commands/     # Command implementations
+│   └── utils/            # Utility functions
+│       └── export_utils.py
+├── tests/                # Test files
+├── requirements.txt      # Project dependencies
+├── requirements-dev.txt  # Development dependencies
+├── setup.py             # Package configuration
+├── run.py               # Application entry point
+└── README.md            # This file
 ```
-│   ├── grade_service.py
-│   └── export_service.py # Data export service
-├── utils/                # Utility functions
-│   └── export_utils.py   # Export utilities
 
 ## Development
 
@@ -444,45 +425,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 4. Push to the branch
 5. Create a new Pull Request
 
-## Project Structure
-
-```
-edumate/
-├── eduplatform/
-│   ├── cli/                  # Command-line interface
-│   │   └── main.py           # Main CLI application
-│   ├── models/               # Data models
-│   │   ├── __init__.py
-│   │   ├── user.py           # User base class
-│   │   ├── student.py        # Student model
-│   │   ├── teacher.py        # Teacher model
-│   │   ├── parent.py         # Parent model
-│   │   ├── admin.py          # Admin model
-│   │   ├── assignment.py     # Assignment model
-│   │   ├── grade.py          # Grade model
-│   │   ├── notification.py   # Notification model
-│   │   └── schedule.py       # Schedule model
-│   ├── repositories/         # Data access layer
-│   │   ├── __init__.py
-│   │   ├── base.py           # Base repository
-│   │   ├── user_repository.py
-│   │   ├── assignment_repository.py
-│   │   ├── grade_repository.py
-│   │   ├── notification_repository.py
-│   │   └── schedule_repository.py
-│   ├── services/             # Business logic
-│   │   ├── __init__.py
-│   │   ├── auth_service.py   # Authentication service
-│   │   ├── assignment_service.py
-│   │   └── grade_service.py
-│   └── __main__.py          # Package entry point
-├── tests/                   # Unit tests
-├── .gitignore
-├── LICENSE
-├── README.md
-├── requirements.txt         # Project dependencies
-└── run.py                  # Application entry point
-```
 
 ## Contributing
 
